@@ -12,10 +12,10 @@ namespace Main
             int n;
             do
             {
-                Console.Write($"\nNhap so phan tu cho mang (1<n<100) : ");
+                Console.Write($"\nNhap so phan tu cho mang (2 < n < 20) : ");
                 n = Int32.Parse(Console.ReadLine());
-                if (n <= 1 || n >= 100) Console.Write($"\nNhap lai (1<n<100) : ");
-            } while (n <= 1 || n >= 100);
+                if (n <= 2 || n >= 20) Console.Write($"\nNhap lai (2 < n < 20) : ");
+            } while (n <= 2 || n >= 20);
             int[] arr = new int[n];
 
             // nhap el cho arr
@@ -26,26 +26,44 @@ namespace Main
                 arr[i] = Int32.Parse(Console.ReadLine());
             }
 
-            // in cac el % 2 
-            Console.Write($"\nCac so chan trong mang : ");
+            // in cac el le > 7
+            Console.Write($"\nCac so le > 7 trong mang : ");
             for (int i = 0; i < n; i++)
             {
-                if (arr[i] % 2 == 0)
+                if (arr[i] > 7 && arr[i] % 2 == 1)
                 {
                     Console.Write($"{arr[i]} , ");
                 }
             }
 
-            // in el max
-            int max = arr[0];
-            for (int i = 1; i < n; i++)
+            // dem el chan
+            int dem = 0;
+            for (int i = 0; i < n; i++)
             {
-                if (max < arr[i])
+                if (arr[i] % 2 == 0)
                 {
-                    max = arr[i];
+                    dem += 1;
                 }
             }
-            Console.WriteLine($"\n\nSo lon nhat trong mang : {max}");
+            Console.WriteLine($"\n\nCo {dem} so chan trong mang");
+
+            // tong el 
+            int tong = 0;
+            for (int i = 0; i < n; i++)
+            {
+                tong += arr[i];
+            }
+            Console.WriteLine($"\nTong cac so trong day la : {tong}");
+
+            // tim el chan max
+            int max = arr[0];
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] % 2 == 0)
+                    if (max < arr[i])
+                        max = arr[i];
+            }
+            Console.WriteLine($"\nSo chan lon nhat trong mang : {max}");
 
             // in el tang dan
             for (int i = 0; i < n; i++)
@@ -67,7 +85,7 @@ namespace Main
                 Console.Write($"{arr[i]}");
                 if (i < n - 1) Console.Write(" , ");
             }
-            Console.Write(" }");
+            Console.Write(" }\n\n\n");
 
         }
 
