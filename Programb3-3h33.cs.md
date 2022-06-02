@@ -2,7 +2,7 @@
 
 namespace Main
 {
-    class Home
+    class bai
     {
         static void Main(string[] args)
         {
