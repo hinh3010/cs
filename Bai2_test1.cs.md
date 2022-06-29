@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Text;
+using System;
 
 namespace Main
 {
@@ -13,12 +14,15 @@ namespace Main
             Tính g/trị tb cộng 
             Tìm số nguyên tố
             */
-            
-            Console.WriteLine("\n\nHo ten       :   Tran Van Hinh");
-            Console.WriteLine("Ngay sinh    :   30/10/1999");
-            Console.WriteLine("Ma sinh vien :   *******");
-            Console.WriteLine("Lop hoc      :   CNTT");
-            Console.WriteLine("Mon hoc      :   Kiem tra lap trinh huuong doi tuong c#");
+
+            Console.OutputEncoding = Encoding.UTF8;
+
+            Console.WriteLine("\n\nHọ tên   :   Trần Văn Hinh");
+            Console.WriteLine("Ngày sinh    :   30/10/1999");
+            Console.WriteLine("Mã sinh viên :   521210288");
+            Console.WriteLine("Lớp học      :   CNTT");
+            Console.WriteLine("Môn học      :   Kiểm tra lập trình hướng đối tượng c#");
+            Console.WriteLine("Bài test     :   1\n\n");
 
             // nhap so p/tu
             int n;
@@ -35,8 +39,12 @@ namespace Main
             Console.WriteLine($"\nNhap gia tri cho mang ");
             for (int i = 0; i < n; i++)
             {
-                Console.Write($"Nhap phan tu {i} : ");
-                arr[i] = Int32.Parse(Console.ReadLine());
+                do
+                {
+                    Console.Write($"Nhap phan tu {i} : ");
+                    arr[i] = Int32.Parse(Console.ReadLine());
+                    if (arr[i] <= 0) Console.Write($"\nNhap lai ... ");
+                } while (arr[i] <= 0);
             }
 
             // in ra số chẵn >= 4
@@ -77,6 +85,9 @@ namespace Main
                     Console.Write($"{arr[i]} , ");
                 }
             }
+            
+            Console.WriteLine("\n\n");
+            
         }
 
     }

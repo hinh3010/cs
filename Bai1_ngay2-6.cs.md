@@ -13,11 +13,14 @@ namespace Main
             In ra danh hiệu hs (giỏi >= 8 , 8>khá >=7 , 7>tb >=5 , yeu+kém <5)
             */
             
-            Console.WriteLine("\n\nHo ten       :   Tran Van Hinh");
-            Console.WriteLine("Ngay sinh    :   30/10/1999");
-            Console.WriteLine("Ma sinh vien :   *******");
-            Console.WriteLine("Lop hoc      :   CNTT");
-            Console.WriteLine("Mon hoc      :   Kiem tra lap trinh huuong doi tuong c#");
+            Console.OutputEncoding = Encoding.UTF8;
+
+            Console.WriteLine("\n\nHọ tên   :   Trần Văn Hinh");
+            Console.WriteLine("Ngày sinh    :   30/10/1999");
+            Console.WriteLine("Mã sinh viên :   521210288");
+            Console.WriteLine("Lớp học      :   CNTT");
+            Console.WriteLine("Môn học      :   Kiểm tra lập trình hướng đối tượng c#");
+            Console.WriteLine("Bài test     :   1\n\n");
 
             // Nhập điểm 
             float toan, ly, hoa;
@@ -53,6 +56,8 @@ namespace Main
             else if (tbCong < 7) Console.Write($"Trung binh");
             else if (tbCong < 8) Console.Write($"Kha");
             else if (tbCong <= 10) Console.Write($"Gioi");
+
+            Console.WriteLine("\n\n");
 
         }
 

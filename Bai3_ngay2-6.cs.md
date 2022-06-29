@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Text;
+using System;
 
 namespace Main
 {
@@ -8,15 +9,18 @@ namespace Main
         {
             Console.Clear();
             /*
-            Nhập từ ma trận vuông co kích thuoc nxn (2<n<20) chua cac so 0 /1
+            Nhập từ ma trận vuông co kích thuoc nxn (2<n<20) chua cac so 0 1
             dem so lượng số 1 theo từng dòng
             Kiểm tra tính đối xứng của ma trận
             */
-            Console.WriteLine("\n\nHo ten       :   Tran Van Hinh");
-            Console.WriteLine("Ngay sinh    :   30/10/1999");
-            Console.WriteLine("Ma sinh vien :   *******");
-            Console.WriteLine("Lop hoc      :   CNTT");
-            Console.WriteLine("Mon hoc      :   Kiem tra lap trinh huuong doi tuong c#");
+            Console.OutputEncoding = Encoding.UTF8;
+
+            Console.WriteLine("\n\nHọ tên   :   Trần Văn Hinh");
+            Console.WriteLine("Ngày sinh    :   30/10/1999");
+            Console.WriteLine("Mã sinh viên :   521210288");
+            Console.WriteLine("Lớp học      :   CNTT");
+            Console.WriteLine("Môn học      :   Kiểm tra lập trình hướng đối tượng c#");
+            Console.WriteLine("Bài test     :   1\n\n");
 
 
             // nhap so p/tu

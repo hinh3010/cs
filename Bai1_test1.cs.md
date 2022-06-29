@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Text;
+using System;
 
 namespace Main
 {
@@ -6,18 +7,20 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            Console.Clear();
             /*
             Nhập vào điểm toán lý hóa ( 0<= điểm <= 10)
             Tính trung bình 3 điểm
             In ra danh hiệu hs (giỏi >= 8 , 8>khá >=7 , 7>tb >=5 , yeu+kém <5)
             */
-            
-            Console.WriteLine("\n\nHo ten       :   Tran Van Hinh");
-            Console.WriteLine("Ngay sinh    :   30/10/1999");
-            Console.WriteLine("Ma sinh vien :   *******");
-            Console.WriteLine("Lop hoc      :   CNTT");
-            Console.WriteLine("Mon hoc      :   Kiem tra lap trinh huuong doi tuong c#");
+            Console.Clear();
+            Console.OutputEncoding = Encoding.UTF8;
+
+            Console.WriteLine("\n\nHọ tên   :   Trần Văn Hinh");
+            Console.WriteLine("Ngày sinh    :   30/10/1999");
+            Console.WriteLine("Mã sinh viên :   521210288");
+            Console.WriteLine("Lớp học      :   CNTT");
+            Console.WriteLine("Môn học      :   Kiểm tra lập trình hướng đối tượng c#");
+            Console.WriteLine("Bài test     :   1\n\n");
 
             // Nhập điểm 
             float toan, ly, hoa;
@@ -54,8 +57,9 @@ namespace Main
             else if (tbCong < 8) Console.Write($"Kha");
             else if (tbCong <= 10) Console.Write($"Gioi");
 
+            Console.WriteLine("\n\n");
         }
-
+ 
     }
 }
 
